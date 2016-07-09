@@ -1,25 +1,25 @@
 ```css
-@utility utilityName {
-    color: green;
-}
-
-@utility utilityName small {
+@utility blockName {
     color: blue;
 }
 
-@component ComponentName {
-    color: cyan;
+@utility blockName span {
+    color: green;
+}
 
-    @modifier modifierName {
-        color: yellow;
+@component elementName {
+    color: brown;
+
+    @modifier mName {
+        color: greenyellow;
     }
 
-    @descendent descendentName {
-        color: navy;
+    @descendent dName {
+        color: aqua;
     }
 
-    @when stateName {
-        color: crimson;
+    @when sName {
+        color: gainsboro;
     }
 }
 
@@ -28,38 +28,4 @@
         color: red;
     }
 }
-```
-```css
-.u-blockName {
-    color: blue
-}
-
-.u--blockName {
-    color: green
-}
-
-.elementName {
-    color: brown
-}
-
-.elementName.is-sName {
-    color: gainsboro
-}
-
-.elementName--mName {
-    color: greenyellow
-}
-
-.elementName__dName {
-    color: aqua
-}
-
-.nmsp-ComponentName {
-    color: red
-}
-```
-```javascript
-processors: [
-  require('postcss-bem')(),
-  require('postcss-nested')()
 ```
