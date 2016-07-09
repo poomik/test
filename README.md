@@ -58,3 +58,8 @@
     color: red
 }
 ```
+```
+processors: [
+  require('postcss-bem')(),
+  require('postcss-nested')()
+```
