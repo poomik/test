@@ -29,7 +29,7 @@
     }
 }
 ```
-```
+```css
 .u-blockName {
     color: blue
 }
@@ -58,7 +58,7 @@
     color: red
 }
 ```
-```
+```javascript
 processors: [
   require('postcss-bem')(),
   require('postcss-nested')()
