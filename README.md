@@ -1,31 +1,29 @@
 ```css
-@utility blockName {
-    color: blue;
+.u-blockName {
+    color: blue
 }
 
-@utility blockName span {
-    color: green;
+.u--blockName {
+    color: green
 }
 
-@component elementName {
-    color: brown;
-
-    @modifier mName {
-        color: greenyellow;
-    }
-
-    @descendent dName {
-        color: aqua;
-    }
-
-    @when sName {
-        color: gainsboro;
-    }
+.elementName {
+    color: brown
 }
 
-@component-namespace nmsp {
-    @component ComponentName {
-        color: red;
-    }
+.elementName.is-sName {
+    color: gainsboro
+}
+
+.elementName--mName {
+    color: greenyellow
+}
+
+.elementName__dName {
+    color: aqua
+}
+
+.nmsp-ComponentName {
+    color: red
 }
 ```
