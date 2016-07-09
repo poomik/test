@@ -1,25 +1,25 @@
-```
-@utility blockName {
-    color: blue;
-}
-
-@utility blockName span {
+```css
+@utility utilityName {
     color: green;
 }
 
-@component elementName {
-    color: brown;
+@utility utilityName small {
+    color: blue;
+}
 
-    @modifier mName {
-        color: greenyellow;
+@component ComponentName {
+    color: cyan;
+
+    @modifier modifierName {
+        color: yellow;
     }
 
-    @descendent dName {
-        color: aqua;
+    @descendent descendentName {
+        color: navy;
     }
 
-    @when sName {
-        color: gainsboro;
+    @when stateName {
+        color: crimson;
     }
 }
 
