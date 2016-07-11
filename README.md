@@ -1,29 +1,18 @@
-```css
-.u-blockName {
-    color: blue
-}
-
-.u--blockName {
-    color: green
-}
-
-.elementName {
-    color: brown
-}
-
-.elementName.is-sName {
-    color: gainsboro
-}
-
-.elementName--mName {
-    color: greenyellow
-}
-
-.elementName__dName {
-    color: aqua
-}
-
-.nmsp-ComponentName {
-    color: red
-}
+```js
+var postcss = require("postcss");
+var fs = require("fs");
+var css = fs.readFileSync("./css/test.css", "utf-8");
+postcss([ require('postcss-bem')({
+    defaultNamespace: undefined, // пространство имен по умолчанию для использования, ни по умолчанию
+    style: 'suit', // suit или bem, suit установлено по умолчанию,
+    separators: {
+        descendent: '__' // переписывает любой разделитель по умолчанию, для выбранного стиля
+    },
+    shortcuts: {
+        utility: 'util',
+        b:"b"
+    }
+}) ]).process(css).then( function(res) {
+    fs.writeFileSync("./css/out.css", res);
+});
 ```
